@@ -1,0 +1,4 @@
+# Ignore all executables and build artifacts
+*.exe
+*.ilk
+*.pdb

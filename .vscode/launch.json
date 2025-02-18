@@ -1,0 +1,27 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "C++ Debug",
+            "type": "cppvsdbg",  // Use cppvsdbg for Clang on Windows
+            "request": "launch",
+            "program": "${workspaceFolder}/main.exe",  // Path to your compiled binary
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "gdb",  // Use GDB for debugging (with Clang)
+            "miDebuggerPath": "C:/clang+llvm-19.1.7-x86_64-pc-windows-msvc/bin/clang++",  // Path to clang++
+            "preLaunchTask": "build with clang++",  // Build task you set up earlier
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ],
+            "visualizerFile": "${workspaceFolder}/.vscode/clang.debugger"
+        }
+    ]
+}
